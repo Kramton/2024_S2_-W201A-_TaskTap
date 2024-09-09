@@ -1,0 +1,18 @@
+.navBarWrap {
+    background-color: rgb(0, 162, 255);
+}
+
+.navBarWrap button {
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px;
+    float: right;
+}
+
+.navBarWrap button:hover {
+    background-color: aqua;
+}
+
+img {
+    height: 70px;
+}
