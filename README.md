@@ -3,8 +3,8 @@ To start the React app dev server:
 2) run <npm start>
 3) access web page in browser on URL http://localhost:3000/
 
-To stop server run Ctrl+C andtthen Y+Enter
-To restat React dev server just start it again
+To stop server run Ctrl+C and then Y+Enter
+To restart React dev server just start it again
 
 To start Express node js server:
 1) navigate to server folder
