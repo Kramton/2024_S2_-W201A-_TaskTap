@@ -32,9 +32,6 @@ function App() {
             <Route path="/Button2" element={<Button2/>}/>
             <Route path="/Button3" element={<Button3/>}/>
             <Route path="/Button4" element={<Button4/>}/>
-          <Route path="/Button2" element={<Button2/>}/>
-          <Route path="/Button3" element={<Button3/>}/>
-          <Route path="/Button4" element={<Button4/>}/>
         </Route>
       </Routes>
     </Router>
