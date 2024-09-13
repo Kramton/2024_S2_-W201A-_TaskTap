@@ -1,10 +1,65 @@
 // import { Link } from "react-router-dom"
 import React, { useState } from "react"
 import "./SignInSignUp.css"
+import {auth} from "../firebase.js"
+import {createUserWithEmailAndPassword } from "firebase/auth";
+import { ErrorMessage } from "../Components/ErrorMessage.jsx";
+import {signInWithEmailAndPassword } from "firebase/auth";
 
 const SignInSignUp = () => {
     const [hovered, setHovered] = useState('');
-  
+    const [userCredentials, setUserCredentials] = useState({});
+    const [error, setError] = useState(null);
+
+    function handleCredentials(e){
+      setUserCredentials({...userCredentials, [e.target.name]: [e.target.value]});
+    }
+
+    function handleSignin(e){
+      e.preventDefault();
+      setError(null);
+      signInWithEmailAndPassword(auth, userCredentials.email[0], userCredentials.password[0])
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        setError(error.message)
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+
+      });
+    }
+
+    function handleSignup(e){
+      e.preventDefault();
+      setError(null)
+      createUserWithEmailAndPassword(auth, userCredentials.email[0], userCredentials.password[0])
+        //Important: userCredentials.email is an array
+        //with a single element. need to send the content of the element - a string
+        //hence userCredentials.email[0]
+        .then((userCredential) => {                                                              
+          // Signed up 
+          const user = userCredential.user;
+          console.log(user);
+          // ...
+        })
+        .catch((error) => {
+          setError(error.message)
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode);
+          console.log(errorMessage);
+          // ..
+        });
+    }
+
+    //<input onChange={(e)=>handleCredentials(e)} type="email" name="emailconfirmation"placeholder="Confirm Email" />
+
     return (
       <div className="signPage">
         {/* Set hovered state when mouse cursor is in sign in */}
@@ -15,9 +70,10 @@ const SignInSignUp = () => {
         >
           <h2>Sign In</h2>
           <form className="formCreate">
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Sign In</button>
+            <input onChange={(e)=>{handleCredentials(e)}} type="email" name="email" placeholder="Enter your email" />
+            <input onChange={(e)=>{handleCredentials(e)}} type="password" name="password" placeholder="Enter your password" />
+            {error && <ErrorMessage text={error}/>}
+            <button type="submit" onClick={(e)=>handleSignin(e)}>Sign In</button>
           </form>
         </div>
         
@@ -29,10 +85,10 @@ const SignInSignUp = () => {
         >
           <h2>Sign Up</h2>
           <form className="formCreate">
-            <input type="email" placeholder="Email" />
-            <input type="email" placeholder="Confirm Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Create Account</button>
+            <input onChange={(e)=>{handleCredentials(e)}} type="email" name="email" placeholder="Enter your email" />
+            <input onChange={(e)=>{handleCredentials(e)}} type="password" name="password" placeholder="Enter a password" />
+            {error && <ErrorMessage text={error}/>}
+            <button type="submit" onClick={(e) => {handleSignup(e)}}>Create Account</button>
           </form>
         </div>
       </div>
