@@ -12,29 +12,35 @@ import { Button4 } from './Pages/Button4';
 // Route: route to each individual page
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { PageLayout } from './Layouts/PageLayout';
+import { useState } from 'react';
 // import { SideBarLayout } from './Layouts/SideBarLayout';
 
 /****************
 youtube link: https://www.youtube.com/watch?v=qi32YwjoN2U
  ****************/
 function App() {
+  const [userLoggedIn, setUserLoggedIn] = useState(null); //state variable that stores user auth info if user is authenticated and null otherwise
+
   return (
     <Router>
       <Routes>
         {/* The wrapped in Route element= {<Layout/> are now  
             and the <Route>'s are now child routes of the layout
         */}
-        <Route element= {<PageLayout/>}>
-          {/* path="/" will default route to home page */}
+        <Route element= {<PageLayout userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}>
+        {/* path="/" will default route to home page */}
           <Route path="/" element={<Home/>}/>
-          <Route path="/SignInSignUp" element={<SignInSignUp/>}/>
-          <Route path="/Account" element={<Account/>}/>
-            <Route path="/Button2" element={<Button2/>}/>
-            <Route path="/Button3" element={<Button3/>}/>
-            <Route path="/Button4" element={<Button4/>}/>
+          <Route path="/SignInSignUp" element={<SignInSignUp userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}/>
+          <Route path="/Account" element={<Account userLoggedIn={userLoggedIn}/>}/>
+            
           <Route path="/Button2" element={<Button2/>}/>
           <Route path="/Button3" element={<Button3/>}/>
           <Route path="/Button4" element={<Button4/>}/>
+
+          <Route path="/Button2" element={<Button2/>}/>
+          <Route path="/Button3" element={<Button3/>}/>
+          <Route path="/Button4" element={<Button4/>}/>
+        
         </Route>
       </Routes>
     </Router>

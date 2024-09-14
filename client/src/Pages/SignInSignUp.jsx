@@ -5,11 +5,13 @@ import {auth} from "../firebase.js"
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import { ErrorMessage } from "../Components/ErrorMessage.jsx";
 import {signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
-const SignInSignUp = () => {
+const SignInSignUp = (props) => {
     const [hovered, setHovered] = useState('');
     const [userCredentials, setUserCredentials] = useState({});
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     function handleCredentials(e){
       setUserCredentials({...userCredentials, [e.target.name]: [e.target.value]});
@@ -21,11 +23,13 @@ const SignInSignUp = () => {
       signInWithEmailAndPassword(auth, userCredentials.email[0], userCredentials.password[0])
       .then((userCredential) => {
         // Signed in 
-        const user = userCredential.user;
-        console.log(user);
+        props.setUserLoggedIn(userCredential.user);
+        console.log(props.userLoggedIn);
+        navigate('/Account');
         // ...
       })
       .catch((error) => {
+      
         setError(error.message)
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -44,8 +48,9 @@ const SignInSignUp = () => {
         //hence userCredentials.email[0]
         .then((userCredential) => {                                                              
           // Signed up 
-          const user = userCredential.user;
-          console.log(user);
+          props.setUserLoggedIn(userCredential.user);
+          console.log(props.userLoggedIn);
+          navigate('/Account');
           // ...
         })
         .catch((error) => {

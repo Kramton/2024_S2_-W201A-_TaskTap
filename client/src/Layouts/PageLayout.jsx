@@ -1,10 +1,10 @@
 import { Navbar } from "../Components/NavBar";
 import { Outlet } from "react-router-dom";
 
-export function PageLayout() {
+export function PageLayout(props) {
     return (
         <div>
-            <Navbar/>
+            <Navbar userLoggedIn={props.userLoggedIn} setUserLoggedIn={props.setUserLoggedIn}/>
             <main>
                 {/* Renders the child routes of whatever routes this is in */}
                 <Outlet/>
