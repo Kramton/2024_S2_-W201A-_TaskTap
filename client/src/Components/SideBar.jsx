@@ -3,7 +3,7 @@ import "./SideBar.css"
 
 export function SideBar() {
     return (
-        <div className="container">
+        <div className="sideBarContainer">
             <div className="sidebar">
                 <div className="logout">
                     <button>Logout</button>

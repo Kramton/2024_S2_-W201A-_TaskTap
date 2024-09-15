@@ -53,6 +53,12 @@
     color: white;
   }
   */
+
+  /* I dont know why but div's with the same className will affect eachother... */
+.accountContainer {
+  display: flex;
+}
+
 .content {
   background-color: #fff;
   padding: 30px;

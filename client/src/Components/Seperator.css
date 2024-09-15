@@ -1,0 +1,9 @@
+hr {
+    width: 1000%;
+    height: 1px;
+    background-color: black;
+    border: none;
+    display: flex;
+    margin-top: 40%;
+    /* margin-bottom: 10%; */
+}

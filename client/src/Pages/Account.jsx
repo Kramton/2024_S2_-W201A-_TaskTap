@@ -4,7 +4,7 @@ import { SideBar } from "../Components/SideBar";
 
 export function Account() {
     return (
-        <div className="container">
+        <div className="accountContainer">
             {/* <div className="sidebar">
                 <div className="logout">
                     <button>Logout</button>

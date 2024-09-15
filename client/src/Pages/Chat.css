@@ -1,6 +1,49 @@
+.chatContainer {
+  display: flex;
+}
+
+.user {
+  display: flex;
+}
+
+.name {
+  padding: 20px;
+}
+
 .chat {
   background-color: #fff;
+  display: flex;
   padding: 30px;
-  display: flex; 
+  background-color: aliceblue;
+  height:100px;
+  width:100%;
+}
+
+.bottom {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50%;
   text-align: center;
+  width: 100%;
+}
+
+.textMessage {
+  width: 70%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.buttonContainer {
+  padding-right: 20%;
+}
+
+.sendButton {
+  background-color: rgb(0, 162, 255);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
 }
