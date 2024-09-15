@@ -18,8 +18,8 @@ export function SideBar() {
                     <Link to="/Button3">
                         <button>Button3</button>
                     </Link>
-                    <Link to="/Button4">
-                        <button>Button4</button>
+                    <Link to="/Chat">
+                        <button>Chat</button>
                     </Link>
                 </div>
             </div>
