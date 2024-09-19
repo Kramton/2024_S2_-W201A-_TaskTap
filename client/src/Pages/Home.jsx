@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom"
 import "./Home.css";
-import bg from "../Assets/bg04.mp4";
+import bg from "../Assets/bg.mp4";
 
 export function Home() {
     return (

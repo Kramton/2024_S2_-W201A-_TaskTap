@@ -5,9 +5,6 @@ export function SideBar() {
     return (
         <div className="container">
             <div className="sidebar">
-                <div className="logout">
-                    <button>Logout</button>
-                </div>
                 <div className="menu">
                     <Link to="/Account">
                         <button>Account</button>

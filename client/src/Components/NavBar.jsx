@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css"
-import homerchu from "../Assets/homerchu.png"
+import Logo from "../Assets/TaskTapLogo.png"
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase.js"
 import { useNavigate } from 'react-router-dom';
@@ -33,18 +33,18 @@ export function Navbar(props) {
     return (
         <div className="navBarWrap">
             <a href="./">
-                <img src={homerchu} alt="fused homer pikachu" />
+                <img src={Logo} alt="TaskTap Logo" />
             </a>
-
+            
             {
                 props.userLoggedIn != null
                 ? 
                 <Link to="/">
-                    <button onClick={(e)=>handleLogout(e)}>Signout</button>
+                    <button onClick={(e)=>handleLogout(e)}>Sign Out</button>
                 </Link>
                 :
                 <Link to="/SignInSignUp">
-                    <button>SignUp</button>
+                    <button>Sign In</button>
                 </Link>
             }
 
@@ -59,6 +59,7 @@ export function Navbar(props) {
             <Link to="/">
                 <button>Home</button>
             </Link>
+
         </div>
     )
 }
