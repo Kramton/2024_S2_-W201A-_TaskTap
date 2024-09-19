@@ -21,3 +21,85 @@
   /* padding-left: 30%; */
 }
 
+.profile-picture-section {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  top: 30%;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  background-color: white;
+  text-align: center;
+}
+
+.profile-bg-section {
+  width: 100wh;
+  height: 30%;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+input[type="file"] {
+  margin-top: 100px;
+}
+
+.saveButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.saveButton:hover {
+  background-color: #0056b3;
+}
+
+.changeProfileButton label {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.changeProfileButton label:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.changebgButton {
+  top: 35%;
+  right: 1%;
+  position: absolute;
+}
+
+.changebgButton label {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.changebgButton label:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.changebgButton input {
+  display: none;
+}
