@@ -24,7 +24,7 @@
     position: absolute;
     top: 50%;
     color: white;
-    font-size: 48px;
+    font-size: 36px;
 }
 
 /* .searchBar {
@@ -64,7 +64,7 @@
     background-color: transparent;
   }
   
-  #cover {
+  #searchBar {
     position: absolute;
     top: 65%;
     left: 0;

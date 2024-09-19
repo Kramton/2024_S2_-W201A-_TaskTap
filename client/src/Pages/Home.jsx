@@ -14,15 +14,17 @@ export function Home() {
 
                 {/* <input type="text" className="searchBar" placeholder="Search..."/> */}
                 
-                <div id="cover">
+                <div id="searchBar">
                     <form method="get" action="">
-                        <div class="tb">
-                            <div class="td"><input type="text" placeholder="Search" /></div>
-                            <div class="td" id="s-cover">
+                        <div className="tb">
+                            <div className="td">
+                                <input type="text" placeholder="Search" />
+                            </div>
+                            <div className="td" id="s-cover">
                                 <button type="submit">
-                                <div id="s-circle"></div>
-                                <span></span>
-                            </button>
+                                    <div id="s-circle"></div>
+                                    <span></span>
+                                </button>
                             </div>
                         </div>
                     </form>

@@ -48,6 +48,9 @@ export function Navbar(props) {
                 </Link>
             }
 
+            {/* Place holder button for sprint 2 perhaps */}
+            <button>About Us</button>
+
             {
                 props.userLoggedIn 
                 &&
