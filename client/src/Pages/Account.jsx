@@ -64,17 +64,25 @@ export function Account(props) {
                         <input id="profilePicker"className="changeProfile" type="file" style={{display: "none"}} accept="image/*" onChange={handleImageChange} />
                     </div>
                 </div>
-
-
-                <div className="nameInput">
-                        
-                </div>
                 
                 <div className="profile-bg-section">
                     <img src={bgPreview || defaultbg} alt="background" className="background-image"/>
                     <div className="changebgButton">
                         <label htmlFor="bgPicker">Change background</label>
                         <input id="bgPicker" type="file" style={{display: "none"}} accept="image/*" onChange={bgChange} />
+                    </div>
+                </div>
+
+                <div className="textContainer">
+                    <div className="nameInput">
+                        <input name="text" placeholder="Enter name"/>
+                    </div>
+                    <div className="statusInput">
+                        <input name="text" placeholder="Enter status"/>
+                    </div>
+                    <div className="bioInput">
+                        {/* <input name="text" placeholder="Enter bio"/> */}
+                        <textarea placeholder="Enter bio"></textarea>
                     </div>
                 </div>
                 

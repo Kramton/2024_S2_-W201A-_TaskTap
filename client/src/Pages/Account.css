@@ -4,7 +4,7 @@
 } */
 
 .accountContainer .content {
-  /* background-color: rgb(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.11);
   top: 0;
   left: 0;
   margin-left: 230px;
@@ -12,16 +12,16 @@
 }
 
 .content h1 {
-  padding-left: 50%;
+  /* padding-left: 50%; */
   /* text-align: center; */
 }
 
 .content p {
-  text-align: center;
+  /* text-align: center; */
   /* padding-left: 30%; */
 }
 
-.profile-picture-section {
+.content .profile-picture-section {
   /* background-color: rgba(0, 0, 0, 0.5); */
   top: 30%;
   left: 20%;
@@ -34,28 +34,30 @@
   text-align: center;
 }
 
-.profile-bg-section {
+.content .profile-bg-section {
   width: 100wh;
   height: 30%;
 }
 
-.background-image {
+.content .background-image {
   width: 100%;
   height: 100%;
   border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  object-fit: cover;
 }
 
-.profile-picture {
+.content .profile-picture {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-input[type="file"] {
+.content input[type="file"] {
   margin-top: 100px;
 }
 
-.saveButton {
+.content .saveButton {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -64,16 +66,16 @@ input[type="file"] {
   border-radius: 5px;
 }
 
-.saveButton:hover {
+.content .saveButton:hover {
   background-color: #0056b3;
 }
 
-.changeProfileButton {
+.content .changeProfileButton {
   position: absolute;
   top: 45%;
 }
 
-.changeProfileButton label {
+.content .changeProfileButton label {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   padding: 90px;
@@ -81,18 +83,19 @@ input[type="file"] {
   color: rgba(255, 255, 255, 0.0);
 }
 
-.changeProfileButton label:hover {
+.content .changeProfileButton label:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: rgb(255, 255, 255);
 }
 
-.changebgButton {
-  top: 35%;
+.content .changebgButton {
+  top: 32%;
+  /* bottom: 68%; */
   right: 1%;
   position: absolute;
 }
 
-.changebgButton label {
+.content .changebgButton label {
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   padding: 10px;
@@ -100,11 +103,68 @@ input[type="file"] {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.changebgButton label:hover {
+.content .changebgButton label:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: rgb(255, 255, 255);
 }
 
-.changebgButton input {
+.content .changebgButton input {
   display: none;
+}
+
+.content .textContainer {
+  position: absolute;
+  /* top: 50%; */
+  /* background-color: gray; */
+  /* width: 100vw; */
+  margin-left: 20%;
+  margin-top: 20px;
+}
+
+.content .textContainer .nameInput input {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  outline: 0;
+}
+
+.content .textContainer .statusInput input {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  outline: 0;
+}
+
+.content .textContainer .bioInput {
+  /* color: black; */
+  /* font-size: 18px; */
+  /* background-color: gray; */
+  margin-top: 50px;
+  height: 100px;
+  width: auto;
+  border-radius: 20px;
+}
+
+/* .content .textContainer .bioInput input {
+  text-align: left;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  width: 100%;
+} */
+
+.content .textContainer .bioInput textarea {
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  resize: none;
+  /* display: none; */
 }
