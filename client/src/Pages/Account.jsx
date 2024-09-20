@@ -60,9 +60,14 @@ export function Account(props) {
                 <div className="profile-picture-section">
                     <img src={preview || defaultProfile} alt="Profile" className="profile-picture"/>
                     <div className="changeProfileButton">
-                        <label htmlFor="profilePicker">Change Profile Picture</label>
+                        <label htmlFor="profilePicker">Edit</label>
                         <input id="profilePicker"className="changeProfile" type="file" style={{display: "none"}} accept="image/*" onChange={handleImageChange} />
                     </div>
+                </div>
+
+
+                <div className="nameInput">
+                        
                 </div>
                 
                 <div className="profile-bg-section">

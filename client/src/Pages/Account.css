@@ -68,16 +68,21 @@ input[type="file"] {
   background-color: #0056b3;
 }
 
+.changeProfileButton {
+  position: absolute;
+  top: 45%;
+}
+
 .changeProfileButton label {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
-  padding: 10px;
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.5);
+  padding: 90px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.0);
 }
 
 .changeProfileButton label:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   color: rgb(255, 255, 255);
 }
 

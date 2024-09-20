@@ -18,7 +18,7 @@ export function Home() {
                     <form method="get" action="">
                         <div className="tb">
                             <div className="td">
-                                <input type="text" placeholder="Search" />
+                                <input type="text" placeholder="Search" required/>
                             </div>
                             <div className="td" id="s-cover">
                                 <button type="submit">
