@@ -1,9 +1,5 @@
-/* .container {
-    display: flex;
-    height: 100vh;
-    position: absolute;
-  } */
-  
+.sideBarContainer {
+
   .sidebar {
     width: 190px;
     height: 100vh;
@@ -16,22 +12,6 @@
     position: absolute;
   }
   
-  /* .menu button {
-    margin: 20px 0;
-    padding: 20px;
-    width: 200px;
-    font-size: 20px;
-    background-color: white;
-    color: rgb(0, 162, 255);
-    cursor: pointer;
-    border-radius: 5px;
-  } */
-
- /* .menu button:hover {
-    background-color: rgb(0, 162, 255);
-    color: white;
-  } */
-
   .menu button {
     align-items: center;
     appearance: none;
@@ -80,3 +60,5 @@
     box-shadow: #3c4fe0 0 3px 7px inset;
     transform: translateY(2px);
   }
+}
+  
