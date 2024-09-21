@@ -1,10 +1,6 @@
-.page-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding: 40px;
-}
+.newOrdersContainer {
 
+<<<<<<< HEAD
 .content h1 {
     /* align-items: center; */
     padding-left: 50%;
@@ -86,9 +82,117 @@ li {
     .tasks-container {
         flex-direction: column; 
     }
+=======
+    .createJobContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .page-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        padding: 40px;
+    }
+    
+    .main-content {
+        flex: 1;
+        padding: 40px;
+        max-width: 1200px;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    form {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    label {
+        font-weight: bold; 
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    input[type="file"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        background-color: #f9f9f9;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    textarea {
+        height: 150px; 
+    }
+    
+    
+    .tasks-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+>>>>>>> ad9388aaf12ec795d86d15fb81664c8c1e719dd2
     .current-tasks,
     .previous-tasks {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 45%;
     }
+<<<<<<< HEAD
+=======
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        padding: 10px;
+        background-color: #f0f0f0;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+    
+    @media (max-width: 768px) {
+        .tasks-container {
+            flex-direction: column; 
+        }
+    
+        .current-tasks,
+        .previous-tasks {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+>>>>>>> ad9388aaf12ec795d86d15fb81664c8c1e719dd2
 }
