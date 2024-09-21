@@ -18,6 +18,8 @@ export function SideBar() {
                     <Link to="/Button4">
                         <button>Order history</button>
                     </Link>
+                    <button>Chat</button>
+                    <button>Help</button>
                 </div>
             </div>
         </div>
