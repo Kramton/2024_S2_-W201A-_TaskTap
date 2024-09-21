@@ -75,59 +75,61 @@ export function NewOrders() {
   return (
     <div className="newOrdersContainer">
       <SideBar />
-      <form onSubmit={handleSubmit}>
-        <h1>Create a Job</h1>
-        <div>
-          <label>Job Type:</label>
-          <input
-            type="text"
-            value={jobType}
-            onChange={(e) => setJobType(e.target.value)}
-            required
-          />
-        </div>
-
-        <div>
-          <label>Start Date:</label>
-          <input
-            type="date"
-            value={startDate}
-            onChange={handleDateChange}
-            disabled={isImmediate}
-          />
-          <label>
+      <div className="createJobContainer">
+        <form onSubmit={handleSubmit}>
+          <h1>Create a Job</h1>
+          <div>
+            <label>Job Type:</label>
             <input
-              type="checkbox"
-              checked={isImmediate}
-              onChange={handleImmediateChange}
+              type="text"
+              value={jobType}
+              onChange={(e) => setJobType(e.target.value)}
+              required
             />
-            Start Immediately
-          </label>
-        </div>
+          </div>
 
-        <div>
-          <label>Description:</label>
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
-          />
-        </div>
+          <div>
+            <label>Start Date:</label>
+            <input
+              type="date"
+              value={startDate}
+              onChange={handleDateChange}
+              disabled={isImmediate}
+            />
+            <label>
+              <input
+                type="checkbox"
+                checked={isImmediate}
+                onChange={handleImmediateChange}
+              />
+              Start Immediately
+            </label>
+          </div>
 
-        <div>
-          <label>Upload Photo (optional):</label>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            onChange={handleFileChange}
-          />
-        </div>
+          <div>
+            <label>Description:</label>
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+            />
+          </div>
 
-        <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Saving..." : "Save"}
-        </button>
-      </form>
+          <div>
+            <label>Upload Photo (optional):</label>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
+            />
+          </div>
+
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Saving..." : "Save"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
