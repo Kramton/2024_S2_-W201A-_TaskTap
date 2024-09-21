@@ -84,8 +84,21 @@ export function Account(props) {
                         {/* <input name="text" placeholder="Enter bio"/> */}
                         <textarea placeholder="Enter bio"></textarea>
                     </div>
+
+                    <div className="userReviews">
+                        {/* reviews */}
+                    </div>
+
+                </div>
+
+                <div className="contactInfo">
+                    {/* contact information */}
                 </div>
                 
+                <div className="userMedia">
+                    {/* user media */}
+                </div>
+
                 {/* <button className="saveButton" onClick={handleSubmit}>Save Changes</button> */}
             </div>
         </div>
