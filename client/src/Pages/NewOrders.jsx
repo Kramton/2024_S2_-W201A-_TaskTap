@@ -73,7 +73,7 @@ export function NewOrders() {
   };
 
   return (
-    <div className="container">
+    <div className="newOrdersContainer">
       <SideBar />
       <form onSubmit={handleSubmit}>
         <h1>Create a Job</h1>
