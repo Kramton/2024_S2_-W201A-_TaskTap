@@ -54,14 +54,14 @@
     vertical-align: middle;
   }
   
-  input,
-  button {
+  .homePage input, button {
     color: #fff;
     font-family: Nunito;
     padding: 0;
     margin: 0;
     border: 0;
     background-color: transparent;
+    outline: none;
   }
   
   #searchBar {
@@ -78,18 +78,18 @@
     transform: scale(0.6);
   }
   
-  form {
+  .homePage form {
     height: 96px;
   }
   
-  input[type="text"] {
+  .homePage input[type="text"] {
     width: 100%;
     height: 96px;
     font-size: 60px;
     line-height: 1;
   }
   
-  input[type="text"]::placeholder {
+  .homePage input[type="text"]::placeholder {
     color: white;
   }
   
@@ -98,7 +98,7 @@
     padding-left: 35px;
   }
   
-  button {
+  .homePage button {
     position: relative;
     display: block;
     width: 84px;
@@ -120,7 +120,7 @@
     transition: 0.5s ease all;
   }
   
-  button span {
+  .homePage button span {
     position: absolute;
     top: 68px;
     left: 43px;
@@ -133,7 +133,7 @@
     transition: 0.5s ease all;
   }
   
-  button span:before, button span:after {
+  .homePage button span:before, button span:after {
     content: "";
     position: absolute;
     bottom: 0;

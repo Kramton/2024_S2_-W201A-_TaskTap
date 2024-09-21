@@ -1,5 +1,6 @@
 .navBarWrap {
-    background-color: rgba(50, 152, 211, 0.3);
+    /* background-color: rgba(50, 152, 211, 0.3); */
+    background-image: radial-gradient(100% 100% at 100% 0, rgba(90, 219, 255, 0.2) 0, rgba(84, 215, 255, 0.2) 100%);
     padding: 10px;
 }
 

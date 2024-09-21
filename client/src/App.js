@@ -3,8 +3,8 @@ import SignInSignUp from './Pages/SignInSignUp';
 import { Home } from './Pages/Home';
 import { Account } from './Pages/Account';
 import { NewOrders } from './Pages/NewOrders';
-import { Button3 } from './Pages/Button3';
-import { Button4 } from './Pages/Button4';
+import { CurrentOrder } from './Pages/CurrentOrder';
+import { OrderHistory } from './Pages/OrderHistory';
 
 // React Router
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
@@ -27,8 +27,8 @@ function App() {
           <Route path="/Account" element={<Account userLoggedIn={userLoggedIn}/>}/>
             
           <Route path="/NewOrders" element={<NewOrders/>}/>
-          <Route path="/Button3" element={<Button3/>}/>
-          <Route path="/Button4" element={<Button4/>}/>
+          <Route path="/CurrentOrder" element={<CurrentOrder/>}/>
+          <Route path="/OrderHistory" element={<OrderHistory/>}/>
         
         </Route>
       </Routes>
