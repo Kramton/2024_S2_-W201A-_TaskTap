@@ -15,7 +15,9 @@ const firebaseConfig = {
   projectId: "tasktap-e05bc",
   storageBucket: "tasktap-e05bc.appspot.com",
   messagingSenderId: "817425841739",
-  appId: "1:817425841739:web:107acb02b6334f732797ce"
+  appId: "1:817425841739:web:107acb02b6334f732797ce",
+  //databaseURL: "https://tasktap-e05bc-default-rtdb.firebaseio.com/"
+  databaseURL: "https://tasktap-e05bc-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
 // Initialize Firebase
