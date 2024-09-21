@@ -6,20 +6,13 @@ import { NewOrders } from './Pages/NewOrders';
 import { Button3 } from './Pages/Button3';
 import { Button4 } from './Pages/Button4';
 
-// HashRouter (Router): is a component we need to wrap entire app
-// purpose is to create the routing environment
-// Routes: specify all potential routes of Router.
-// Route: route to each individual page
+// React Router
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { PageLayout } from './Layouts/PageLayout';
 import { useState } from 'react';
-// import { SideBarLayout } from './Layouts/SideBarLayout';
 
-/****************
-youtube link: https://www.youtube.com/watch?v=qi32YwjoN2U
- ****************/
 function App() {
-  const [userLoggedIn, setUserLoggedIn] = useState(null); //state variable that stores user auth info if user is authenticated and null otherwise
+  const [userLoggedIn, setUserLoggedIn] = useState(null); // State for authentication
 
   return (
     <Router>
@@ -44,7 +37,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
-  ); 
+  );
 }
 
 export default App;
