@@ -6,6 +6,7 @@ import {createUserWithEmailAndPassword } from "firebase/auth";
 import { ErrorMessage } from "../Components/ErrorMessage.jsx";
 import {signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import bg from "../Assets/bg.mp4";
 
 const SignInSignUp = (props) => {
     const [hovered, setHovered] = useState('');
@@ -67,6 +68,10 @@ const SignInSignUp = (props) => {
 
     return (
       <div className="signPage">
+        <div className="background">
+                <video src={ bg } autoPlay loop muted></video>
+            </div>
+
         {/* Set hovered state when mouse cursor is in sign in */}
         <div
           className={`hoverState ${hovered === 'signIn' ? 'hover' : ''}`}

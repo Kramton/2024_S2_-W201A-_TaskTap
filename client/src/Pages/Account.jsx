@@ -4,8 +4,12 @@ import { SideBar } from "../Components/SideBar";
 
 export function Account(props) {
     return (
+<<<<<<< HEAD
         <div className="container">
             
+=======
+        <div className="accountContainer">
+>>>>>>> styling-web-page
             <SideBar/>
             <div className="content">
                 <h1>Account</h1>
