@@ -13,7 +13,7 @@ export function SideBar() {
                         <button>Account</button>
                     </Link>
                     <Link to="/Button2">
-                        <button>Button2</button>
+                        <button>Tasks</button>
                     </Link>
                     <Link to="/Button3">
                         <button>Button3</button>
