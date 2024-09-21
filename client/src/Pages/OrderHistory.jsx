@@ -3,9 +3,11 @@ import "./OrderHistory.css"
 
 export function OrderHistory() {
     return (
-        <div className="orderHistory">
+        <div className="orderHistoryContainer">
             <SideBar/>
-            <h1>Order History</h1>
+            <div className="orderHistory">
+                <h1>Order History</h1>
+            </div>
             
         </div>
     )
