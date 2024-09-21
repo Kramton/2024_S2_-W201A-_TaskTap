@@ -95,12 +95,14 @@ export function Account(props) {
                     {/* contact information */}
                 </div>
                 
-                <div className="userMedia">
-                    {/* user media */}
-                </div>
 
                 {/* <button className="saveButton" onClick={handleSubmit}>Save Changes</button> */}
             </div>
+
+            {/* <div className="userMedia">
+                user media
+            </div> */}
+
         </div>
     )
 }
