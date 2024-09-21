@@ -5,6 +5,7 @@ import "./NewOrders.css";
 import { getDatabase, ref, set } from "firebase/database"; // Realtime Database
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage"; // Firebase Storage
 import { v4 as uuidv4 } from "uuid";
+import ItemList from "../Components/ItemList";
 
 
 export function NewOrders() {
@@ -73,6 +74,7 @@ export function NewOrders() {
   };
 
   return (
+    <>
     <div className="newOrdersContainer">
       <SideBar />
       <div className="createJobContainer">
@@ -115,14 +117,6 @@ export function NewOrders() {
             />
           </div>
 
-<<<<<<< HEAD
-        <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Saving..." : "Save"}
-        </button>
-      </form>
-      <div className="Job List">
-        
-=======
           <div>
             <label>Upload Photo (optional):</label>
             <input
@@ -137,8 +131,13 @@ export function NewOrders() {
             {isSubmitting ? "Saving..." : "Save"}
           </button>
         </form>
->>>>>>> ad9388aaf12ec795d86d15fb81664c8c1e719dd2
       </div>
     </div>
+    <div className="newOrdersContainer">
+      <div className="createJobContainer">
+        <ItemList/>
+      </div>
+    </div>
+    </>
   );
 }
