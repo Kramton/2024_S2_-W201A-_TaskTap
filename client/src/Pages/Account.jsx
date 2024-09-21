@@ -5,17 +5,7 @@ import { SideBar } from "../Components/SideBar";
 export function Account(props) {
     return (
         <div className="container">
-            {/* <div className="sidebar">
-                <div className="logout">
-                    <button>Logout</button>
-                </div>
-                <div className="menu">
-                    <button>Account</button>
-                    <button>Button 2</button>
-                    <button>Button 3</button>
-                    <button>Button 4</button>
-                </div>
-            </div> */}
+            
             <SideBar/>
             <div className="content">
                 <h1>Account</h1>

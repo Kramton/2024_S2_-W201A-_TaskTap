@@ -1,11 +1,11 @@
 import { SideBar } from "../Components/SideBar";
-import "./Button2.css"
+import "./NewOrders.css"
 
-export function Button2() {
+export function NewOrders() {
     return (
         <div className="test">
             <SideBar/>
-            <h1>Button2</h1>
+            <h1>A page for new orders</h1>
         </div>
     )
 }

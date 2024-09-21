@@ -2,7 +2,7 @@
 import SignInSignUp from './Pages/SignInSignUp';
 import { Home } from './Pages/Home';
 import { Account } from './Pages/Account';
-import { Button2 } from './Pages/Button2';
+import { NewOrders } from './Pages/NewOrders';
 import { Button3 } from './Pages/Button3';
 import { Button4 } from './Pages/Button4';
 
@@ -33,13 +33,13 @@ function App() {
           <Route path="/SignInSignUp" element={<SignInSignUp userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}/>
           <Route path="/Account" element={<Account userLoggedIn={userLoggedIn}/>}/>
             
-          <Route path="/Button2" element={<Button2/>}/>
+          <Route path="/NewOrders" element={<NewOrders/>}/>
           <Route path="/Button3" element={<Button3/>}/>
           <Route path="/Button4" element={<Button4/>}/>
 
-          <Route path="/Button2" element={<Button2/>}/>
+          {/*<Route path="/Button2" element={<Button2/>}/>
           <Route path="/Button3" element={<Button3/>}/>
-          <Route path="/Button4" element={<Button4/>}/>
+          <Route path="/Button4" element={<Button4/>}/>*/}
         
         </Route>
       </Routes>

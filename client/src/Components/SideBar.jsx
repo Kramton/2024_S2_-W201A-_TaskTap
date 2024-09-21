@@ -5,21 +5,18 @@ export function SideBar() {
     return (
         <div className="container">
             <div className="sidebar">
-                <div className="logout">
-                    <button>Logout</button>
-                </div>
                 <div className="menu">
                     <Link to="/Account">
                         <button>Account</button>
                     </Link>
-                    <Link to="/Button2">
-                        <button>Button2</button>
+                    <Link to="/NewOrders">
+                        <button>New orders</button>
                     </Link>
                     <Link to="/Button3">
-                        <button>Button3</button>
+                        <button>Current orders</button>
                     </Link>
                     <Link to="/Button4">
-                        <button>Button4</button>
+                        <button>Order history</button>
                     </Link>
                 </div>
             </div>

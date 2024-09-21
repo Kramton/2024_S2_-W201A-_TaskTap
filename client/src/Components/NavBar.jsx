@@ -44,7 +44,7 @@ export function Navbar(props) {
                 </Link>
                 :
                 <Link to="/SignInSignUp">
-                    <button>SignUp</button>
+                    <button>Sign Up/Sign In</button>
                 </Link>
             }
 
