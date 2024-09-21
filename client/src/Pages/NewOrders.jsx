@@ -1,7 +1,7 @@
 import { SideBar } from "../Components/SideBar";
 import "./NewOrders.css"
 import React, { useState, useRef } from "react";
-import "./Button2.css";
+import "./NewOrders.css";
 import { getDatabase, ref, set } from "firebase/database"; // Realtime Database
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage"; // Firebase Storage
 import { v4 as uuidv4 } from "uuid";
