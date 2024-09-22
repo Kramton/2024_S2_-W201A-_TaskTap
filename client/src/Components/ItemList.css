@@ -1,0 +1,15 @@
+.itemListContainer {
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    /* width: 100%; */
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+
+    .itemListContent h2 {
+        text-align: center;
+    }
+
+
+}

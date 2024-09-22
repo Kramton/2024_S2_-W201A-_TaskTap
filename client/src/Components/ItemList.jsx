@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ref, onValue } from 'firebase/database';
 import { db } from '../firebase.js';
 import { OrderItem } from './OrderItem';
+import "./ItemList.css";
 
 function ItemList() {
     const [items, setItems] = useState([]);
@@ -28,13 +29,15 @@ function ItemList() {
     }, []);
   
     return (
-      <div>
-        <h2>Items List</h2>
-        <ul>
-          {items.map(item => (
-            <OrderItem jobType={item.jobType} startDate={item.startDate} description={item.description}/>
-          ))}
-        </ul>
+      <div className='itemListContainer'>
+        <div className='itemListContent'>
+          <h2>Items List</h2>
+          <ul>
+            {items.map(item => (
+              <OrderItem jobType={item.jobType} startDate={item.startDate} description={item.description}/>
+            ))}
+          </ul>
+        </div>
       </div>
     );
 }
