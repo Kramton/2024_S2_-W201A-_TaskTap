@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ref, onValue } from 'firebase/database';
 import { db } from '../firebase.js';
+import { OrderItem } from './OrderItem';
 
 function ItemList() {
     const [items, setItems] = useState([]);
@@ -8,22 +9,23 @@ function ItemList() {
     useEffect(() => {
       const itemsRef = ref(db, 'jobs'); // 'items' is the path to your data in the database
       
-      const unsubscribe = onValue(itemsRef, (snapshot) => {
+      onValue(itemsRef, (snapshot) => {
         const data = snapshot.val();
+        //console.log(data);
+        //console.log(Object.keys(data));
         if (data) {
           // Convert the object to an array of items
-          const itemList = Object.keys(data).map(key => ({
+          const itemList = Object.keys(data).map((key) => ({
             id: key,
             ...data[key]
           }));
+          console.log(itemList);
           setItems(itemList);
-        } else {
-          setItems([]);
         }
+
       });
       
 
-      return () => unsubscribe();
     }, []);
   
     return (
@@ -31,9 +33,7 @@ function ItemList() {
         <h2>Items List</h2>
         <ul>
           {items.map(item => (
-            <li key={item.id}>
-              {item.name} - {item.description}
-            </li>
+            <OrderItem jobType={item.jobType} startDate={item.startDate} description={item.description}/>
           ))}
         </ul>
       </div>
