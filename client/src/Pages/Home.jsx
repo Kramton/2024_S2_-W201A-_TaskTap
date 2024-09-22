@@ -6,14 +6,18 @@ export function Home() {
     return (
         <div className="homePage">
             <div className="background">
-                <video src={ bg } autoPlay loop muted></video>
+                <video src={bg} autoPlay loop muted></video>
             </div>
             
             <div className="welcome">
                 <h1>Welcome to TaskTap!</h1>
 
-                {/* <input type="text" className="searchBar" placeholder="Search..."/> */}
+                {/* TaskTap Description */}
+                <p className="description">
+                    TaskTap is your go-to platform for on-demand services. Whether you need a quick haircut, plumbing help, or electrical fixes, TaskTap connects you with local professionals instantly.
+                </p>
                 
+                {/* Search bar */}
                 <div id="searchBar">
                     <form method="get" action="">
                         <div className="tb">
@@ -31,5 +35,5 @@ export function Home() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
