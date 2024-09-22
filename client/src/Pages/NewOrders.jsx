@@ -75,8 +75,9 @@ export function NewOrders() {
 
   return (
     <>
+    <SideBar />
     <div className="newOrdersContainer">
-      <SideBar />
+      
       <div className="createJobContainer">
         <form onSubmit={handleSubmit}>
           <h1>Create a Job</h1>
@@ -135,7 +136,7 @@ export function NewOrders() {
     </div>
     <div className="newOrdersContainer">
       <div className="createJobContainer">
-        <ItemList/>
+        {/* <ItemList/> */}
       </div>
     </div>
     </>

@@ -201,6 +201,29 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 20px;
+
+  h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    /* text-align: left; */
+  }
+
+  input {
+    border-style: none;
+    outline: 0;
+    background: none;
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  .socialMediaIcons img {
+    display: column;
+    margin: 20px;
+  }
 }
 
 .accountContainer .userMedia {

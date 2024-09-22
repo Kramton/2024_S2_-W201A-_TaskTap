@@ -4,6 +4,11 @@ import { SideBar } from "../Components/SideBar";
 import React, { useState } from "react";
 import defaultProfile from "../Assets/defaultProfile.png";
 import defaultbg from "../Assets/square.png";
+import fb from "../Assets/facebookIcon.png";
+import insta from "../Assets/instagramIcon.png";
+import yt from "../Assets/youtubeIcon.png";
+import twitter from "../Assets/twitterIcon.png";
+import linkedIn from "../Assets/linkedInIcon.png";
 
 export function Account(props) {
     
@@ -93,6 +98,20 @@ export function Account(props) {
 
                 <div className="contactInfo">
                     {/* contact information */}
+                    <div className="info">
+                        <h1>Contact Information</h1>
+                        <h3>Phone: <input name="number" placeholder="Enter phone number"/> </h3>
+                        <h3>Email: <input name="email" placeholder="Enter email address"/> </h3>
+                        <h3>Social Media</h3>
+                        
+                        <div className="socialMediaIcons">
+                            <img src={ fb } alt="facebook" />
+                            <img src={ yt } alt="youtube" />
+                            <img src={ insta } alt="instagram" />
+                            <img src={ linkedIn } alt="linkedin" />
+                            <img src={ twitter } alt="twitter" />
+                        </div>
+                    </div>
                 </div>
                 
 
