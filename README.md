@@ -1,8 +1,8 @@
 To set up the project
-0)Have Node.js and NPM installed
-1)Clone the repository to local machine
-2)Navigate to client folder
-3)run nmp install
+0) Have Node.js and NPM installed
+1) Clone the repository to local machine
+2) Navigate to client folder
+3) run nmp install
 
 To start the React app dev server:
 1) navigate to client folder 
