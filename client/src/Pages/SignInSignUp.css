@@ -1,10 +1,6 @@
-.signPage .background {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  object-fit: cover;
-  z-index: -1;
+.background video {
+  /* please go to Home.css to edit background video */
+  /* because it affects other specific variables */
 }
 
 .signPage {
