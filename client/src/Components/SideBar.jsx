@@ -10,7 +10,7 @@ export function SideBar() {
                         <button>Account</button>
                     </Link>
                     <Link to="/NewOrders">
-                        <button>New orders</button>
+                        <button>New Orders</button>
                     </Link>
                     <Link to="/CurrentOrder">
                         <button>Current Orders</button>
@@ -18,6 +18,9 @@ export function SideBar() {
                     <Link to="/OrderHistory">
                         <button>Order History</button>
                     </Link>
+                    <Link to="/Professionals">
+                        <button>Professionals</button>
+                    </Link> 
                     <button>Chat</button>
                     <button>Help</button>
                 </div>
