@@ -1,6 +1,7 @@
 import "./AboutUs.css";
 import bg from "../Assets/bg.mp4";
 import placeHolder from "../Assets/placeHolder.png";
+import theTeam from "../Assets/TheTeam.png";
 import React, { useRef, useEffect } from 'react';
 
 export function AboutUs() {
@@ -22,12 +23,12 @@ export function AboutUs() {
                         doloribus harum libero at aspernatur quasi beatae.
                     </p>
                 </div>
-                <img src={placeHolder} alt="place holder" />
+                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
             </div>
           
             <h1>Our Mission</h1>
             <div className="AboutUsMissionWrap">
-                <img src={placeHolder} alt="place holder" />
+                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
                 <div className="AboutUsMissionParagraph">
                     <p>
                         At TaskTap, Lorem ipsum dolor sit, amet consectetur 
@@ -47,12 +48,12 @@ export function AboutUs() {
                         <li><strong>Innovation:</strong> dicta doloribus harum libero at aspernatur quasi beatae.</li>
                     </ul>
                 </div>
-                <img src={placeHolder} alt="place holder" />
+                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
             </div>
             
             <h1>Meet the Team</h1>
             <div className="AboutUsTeamWrap">
-                <img src={placeHolder} alt="place holder" />
+                <img className="theTeamImage" src={theTeam} alt="The Team" />
                 <div className="AboutUsTeamParagraph">
                     <p>
                         TaskTap is built by a passionate group of developers, designers, and productivity enthusiasts
@@ -70,7 +71,7 @@ export function AboutUs() {
                         feel free to reach out to us at <a href="mailto:support@tasktap.com">support@tasktap.com</a>.
                     </p>
                 </div>
-                <img src={placeHolder} alt="place holder" />
+                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
             </div>
         </div>
     )
