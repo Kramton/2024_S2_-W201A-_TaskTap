@@ -22,6 +22,7 @@
         flex-direction: row;
         margin-bottom: 200px;
         margin-top: 100px;
+        align-items: center;
 
         .AboutUsParagraph, .AboutUsMissionParagraph, .AboutUsValuesList,
         .AboutUsTeamParagraph, .AboutUsContactParagraph {
@@ -31,11 +32,13 @@
             background-color: rgba(240, 248, 255, 0.400);
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 32px;
         }
 
         .placeHolderImage {
             width: auto;
             height: 400px;
+            border-radius: 10px;
         }
 
         .theTeamImage {

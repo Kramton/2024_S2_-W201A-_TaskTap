@@ -42,11 +42,17 @@ export function AboutUs() {
             <h1>Our Values</h1>
             <div className="AboutUsValuesWrap">
                 <div className="AboutUsValuesList">
-                    <ul>
-                        <li><strong>Efficiency:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-                        <li><strong>Collaboration:</strong> Nostrum, similique? Quibusdam atque porro illum incidunt itaque illo sint nihil labore voluptas molestias,</li>
-                        <li><strong>Innovation:</strong> dicta doloribus harum libero at aspernatur quasi beatae.</li>
-                    </ul>
+                    <p>
+                        <strong>Efficiency:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <br />
+                    <p>
+                        <strong>Collaboration:</strong> Nostrum, similique? Quibusdam atque porro illum incidunt itaque illo sint nihil labore voluptas molestias,
+                    </p>
+                    <br />
+                    <p>
+                        <strong>Innovation:</strong> dicta doloribus harum libero at aspernatur quasi beatae.
+                    </p>
                 </div>
                 <img className="placeHolderImage" src={placeHolder} alt="place holder" />
             </div>
