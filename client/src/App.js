@@ -6,6 +6,7 @@ import { NewOrders } from './Pages/NewOrders';
 import { CurrentOrder } from './Pages/CurrentOrder';
 import { OrderHistory } from './Pages/OrderHistory';
 import { Professionals } from './Pages/Professionals'; 
+import { Review } from './Pages/Review'; 
 
 // React Router
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
@@ -27,9 +28,8 @@ function App() {
           <Route path="/NewOrders" element={<NewOrders/>}/>
           <Route path="/CurrentOrder" element={<CurrentOrder/>}/>
           <Route path="/OrderHistory" element={<OrderHistory/>}/>
-
-          
           <Route path="/Professionals" element={<Professionals/>}/>
+          <Route path="/Review/:professionalId" element={<Review/>}/>
         </Route>
       </Routes>
     </Router>
