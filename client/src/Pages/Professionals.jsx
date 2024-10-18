@@ -23,7 +23,7 @@ export function Professionals() {
   return (
     <div className="professionalsPage">
       <SideBar />
-      <div className="content">
+      <div className="proContent">
         <h2>Professionals</h2>
         <input 
           type="text" 
