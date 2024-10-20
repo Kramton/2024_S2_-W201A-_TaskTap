@@ -1,8 +1,10 @@
 import "./AboutUs.css";
 import bg from "../Assets/bg.mp4";
-import placeHolder from "../Assets/placeHolder.png";
 import taskTapLogo from "../Assets/TaskTapLogoVertical.png";
 import theTeam from "../Assets/TheTeam.png";
+import ourMission from "../Assets/OurMission.png";
+import ourValues from "../Assets/OurValues.png";
+import contact from "../Assets/ContactUs.png";
 import React, { useRef, useEffect } from 'react';
 
 export function AboutUs() {
@@ -23,12 +25,12 @@ export function AboutUs() {
                         TaskTap connects you with local professionals instantly.
                     </p>
                 </div>
-                <img className="placeHolderImage" src={taskTapLogo} alt="TaskTap Logo" />
+                <img className="image" src={taskTapLogo} alt="TaskTap Logo" />
             </div>
           
             <h1>Our Mission</h1>
             <div className="AboutUsMissionWrap">
-                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
+                <img className="image" src={ourMission} alt="Our Mission" />
                 <div className="AboutUsMissionParagraph">
                     <p>
                         At TaskTap, we allow individuals to request or to provide professional
@@ -53,12 +55,12 @@ export function AboutUs() {
                         <strong>Client-Driven:</strong> We listen to our clients needs and prioritize their feedback to make our platform better.
                     </p>
                 </div>
-                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
+                <img className="image" src={ourValues} alt="Our Values" />
             </div>
             
             <h1>Meet the Team</h1>
             <div className="AboutUsTeamWrap">
-                <img className="theTeamImage" src={theTeam} alt="The Team" />
+                <img className="image" src={theTeam} alt="The Team" />
                 <div className="AboutUsTeamParagraph">
                     <p>
                         TaskTap is built by a passionate group of developers, designers, and productivity enthusiasts
@@ -76,7 +78,7 @@ export function AboutUs() {
                         feel free to reach out to us at <a href="mailto:support@tasktap.com">support@tasktap.com</a>.
                     </p>
                 </div>
-                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
+                <img className="image" src={contact} alt="contact image" />
             </div>
         </div>
     )

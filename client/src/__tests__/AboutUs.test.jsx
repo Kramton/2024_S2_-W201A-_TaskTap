@@ -38,9 +38,9 @@ describe('AboutUs Component', () => {
     expect(emailLink).toHaveAttribute('href', 'mailto:support@tasktap.com');
   });
 
-  test('render team image', () => {
+  test('render images', () => {
     render(<AboutUs />);
-    const teamImage = screen.getByAltText(/The Team/i);
-    expect(teamImage).toBeInTheDocument();
+    const image = screen.getByAltText(/The Team/i);
+    expect(image).toBeInTheDocument();
   });
 });
