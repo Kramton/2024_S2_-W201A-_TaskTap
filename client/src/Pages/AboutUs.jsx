@@ -1,6 +1,7 @@
 import "./AboutUs.css";
 import bg from "../Assets/bg.mp4";
 import placeHolder from "../Assets/placeHolder.png";
+import taskTapLogo from "../Assets/TaskTapLogoVertical.png";
 import theTeam from "../Assets/TheTeam.png";
 import React, { useRef, useEffect } from 'react';
 
@@ -17,13 +18,12 @@ export function AboutUs() {
             <div className="AboutUsWrap">
                 <div className="AboutUsParagraph">
                     <p>
-                        Welcome to TaskTap, Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Nostrum, similique? Quibusdam atque porro illum 
-                        incidunt itaque illo sint nihil labore voluptas molestias, dicta 
-                        doloribus harum libero at aspernatur quasi beatae.
+                        Welcome to TaskTap! TaskTap is your go-to platform for on-demand services. 
+                        Whether you need a quick haircut, plumbing help, or electrical fixes. 
+                        TaskTap connects you with local professionals instantly.
                     </p>
                 </div>
-                <img className="placeHolderImage" src={placeHolder} alt="place holder" />
+                <img className="placeHolderImage" src={taskTapLogo} alt="TaskTap Logo" />
             </div>
           
             <h1>Our Mission</h1>
@@ -31,10 +31,9 @@ export function AboutUs() {
                 <img className="placeHolderImage" src={placeHolder} alt="place holder" />
                 <div className="AboutUsMissionParagraph">
                     <p>
-                        At TaskTap, Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Nostrum, similique? Quibusdam atque porro illum 
-                        incidunt itaque illo sint nihil labore voluptas molestias, dicta 
-                        doloribus harum libero at aspernatur quasi beatae.
+                        At TaskTap, we allow individuals to request or to provide professional
+                        services. We strive to make individuals to allow for accessible and easy 
+                        to use interface.
                     </p>
                 </div>
             </div>
@@ -43,15 +42,15 @@ export function AboutUs() {
             <div className="AboutUsValuesWrap">
                 <div className="AboutUsValuesList">
                     <p>
-                        <strong>Efficiency:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        <strong>Trust & Safety:</strong> We are committed to provide a secure platform for users to use as a professional service.
                     </p>
                     <br />
                     <p>
-                        <strong>Collaboration:</strong> Nostrum, similique? Quibusdam atque porro illum incidunt itaque illo sint nihil labore voluptas molestias,
+                        <strong>Convenience & Accessibility:</strong> Our platform is designed to be user-friendly and easy to use for everyone.
                     </p>
                     <br />
                     <p>
-                        <strong>Innovation:</strong> dicta doloribus harum libero at aspernatur quasi beatae.
+                        <strong>Client-Driven:</strong> We listen to our clients needs and prioritize their feedback to make our platform better.
                     </p>
                 </div>
                 <img className="placeHolderImage" src={placeHolder} alt="place holder" />
