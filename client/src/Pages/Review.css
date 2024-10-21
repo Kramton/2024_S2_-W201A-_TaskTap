@@ -1,0 +1,20 @@
+.reviewPage {
+    padding: 20px;
+}
+
+.reviewPage h2 {
+    margin-bottom: 20px;
+}
+
+.reviewPage ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.reviewPage li {
+    background: #f9f9f9; 
+    padding: 10px;
+    margin: 5px 0; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}

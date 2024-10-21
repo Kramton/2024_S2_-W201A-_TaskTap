@@ -1,0 +1,39 @@
+.professionalsPage {
+    display: flex;
+}
+
+.proContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.professionalList {
+    width: 100%; 
+    max-width: 600px; 
+}
+
+.professionalItem {
+    background: #f9f9f9; 
+    padding: 15px;
+    margin: 10px 0; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}

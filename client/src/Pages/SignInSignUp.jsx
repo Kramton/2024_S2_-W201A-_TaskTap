@@ -7,6 +7,8 @@ import { ErrorMessage } from "../Components/ErrorMessage.jsx";
 import {signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import bg from "../Assets/bg.mp4";
+import {db} from "../firebase"
+import { getDatabase, ref, set} from "firebase/database";
 
 const SignInSignUp = (props) => {
     const [hovered, setHovered] = useState('');
@@ -50,8 +52,14 @@ const SignInSignUp = (props) => {
         .then((userCredential) => {                                                              
           // Signed up 
           props.setUserLoggedIn(userCredential.user);
-          console.log(props.userLoggedIn);
+          console.log(userCredential.user.uid);
+          //console.log(props.userLoggedIn);
           navigate('/Account');
+          set(ref(db, 'users/' + userCredential.user.uid), {
+            userName: userCredential.user.uid,
+            userStatus: "Client",
+            userBio: "Empty"
+          });
           // ...
         })
         .catch((error) => {
