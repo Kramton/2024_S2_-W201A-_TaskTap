@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './Review.css'; 
+import { SideBar } from "../Components/SideBar";
 
 export function Review() {
     const { professionalId } = useParams(); 
@@ -15,12 +16,16 @@ export function Review() {
 
     return (
         <div className="reviewPage">
-            <h2>Reviews for {professional.name}</h2>
-            <ul>
-                {professional.reviews.map((review, index) => (
-                    <li key={index}>{review}</li>
-                ))}
-            </ul>
+            <SideBar />
+            <div className="reviewWrap">
+                <h2>Reviews for {professional.name}</h2>
+                <ul>
+                    {professional.reviews.map((review, index) => (
+                        <li key={index}>{review}</li>
+                    ))}
+                </ul>
+            </div>
+            
         </div>
     );
 }
