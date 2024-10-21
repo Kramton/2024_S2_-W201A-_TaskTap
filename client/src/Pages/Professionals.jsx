@@ -1,23 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Professionals.css';
 import { SideBar } from "../Components/SideBar";
+import { db } from '../firebase'; // Adjust this based on your file structure
+import { ref, onValue } from 'firebase/database';
 
 export function Professionals() {
-  const [professionals, setProfessionals] = useState([
-    { id: 1, name: 'Lebron James', jobType: 'Plumber' },
-    { id: 2, name: 'Lionel Messi', jobType: 'Electrician' },
-    { id: 3, name: 'Cristiano Ronaldo', jobType: 'Hair Stylist' },
-  ]);
-
+  const [professionals, setProfessionals] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const professionalsRef = ref(db, 'users'); // Change 'users' if the node name is different
+
+    onValue(professionalsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        // Filter for professionals
+        const proList = Object.keys(data)
+          .map(key => ({ id: key, ...data[key] }))
+          .filter(professional => professional.userStatus === 'Pro');
+
+        setProfessionals(proList);
+      }
+    });
+  }, []);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
   const filteredProfessionals = professionals.filter(professional =>
-    professional.name.toLowerCase().includes(searchTerm.toLowerCase())
+    professional.userName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -36,12 +49,13 @@ export function Professionals() {
           {filteredProfessionals.map(professional => (
             <div key={professional.id} className="professionalItem">
               <Link to={`/Review/${professional.id}`}>
-                <h4>{professional.name}</h4>
+                <h4>{professional.userName}</h4>
               </Link>
-              <p>Job Type: {professional.jobType}</p>
+              <p>Bio: {professional.userBio}</p> {/* Bio will now wrap if too long */}
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );

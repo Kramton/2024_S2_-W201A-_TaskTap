@@ -37,3 +37,11 @@ h2 {
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
+
+.professionalItem p {
+    white-space: normal; /* Allow wrapping */
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    word-wrap: break-word; /* For older browsers */
+    word-break: break-word; /* Break words that are too long */
+  }
+  
