@@ -1,7 +1,6 @@
 import "./AboutUs.css";
 import bg from "../Assets/bg.mp4";
 import taskTapLogo from "../Assets/TaskTapLogoVertical.png";
-import theTeam from "../Assets/TheTeam.png";
 import ourMission from "../Assets/OurMission.png";
 import ourValues from "../Assets/OurValues.png";
 import contact from "../Assets/ContactUs.png";
@@ -60,7 +59,6 @@ export function AboutUs() {
             
             <h1>Meet the Team</h1>
             <div className="AboutUsTeamWrap">
-                <img className="image" src={theTeam} alt="The Team" />
                 <div className="AboutUsTeamParagraph">
                     <p>
                         TaskTap is built by a passionate group of developers, designers, and productivity enthusiasts
