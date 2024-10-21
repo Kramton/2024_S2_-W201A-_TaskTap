@@ -205,7 +205,7 @@ export function Account(props) {
                     <div className="statusInput">
                         <form onSubmit={(e) => handleEditStatus(e)}>
                             <select className="selectStatus" onChange={(e)=>handleChangeStatus(e)}>
-                                <option>Cleint</option>
+                                <option>Client</option>
                                 <option>Pro</option>     
                             </select>
                             <button name="editStatus" className="saveButton" type="submit">Save</button>
