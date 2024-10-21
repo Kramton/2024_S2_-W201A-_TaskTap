@@ -7,7 +7,7 @@ import defaultbg from "../Assets/square.png";
 //import { getAuth } from "firebase/auth";
 import {auth} from "../firebase"
 import {db} from "../firebase"
-import { getDatabase, ref, set, update } from "firebase/database";
+import { getDatabase, ref, set, update, onValue } from "firebase/database";
 
 
 
@@ -23,6 +23,26 @@ export function Account(props) {
     const [email, setEmail] = useState(null);
 
     const [bio, setBio] = useState(null);
+
+    const [deleting, setDeleting] = useState(null);
+
+    const [displayname, setDisplayname] = useState(null);
+    const [displaystatus, setDisplaystatus] = useState(null);
+    const [displaybio, setDisplaybio] = useState(null);
+
+    //fetching profile details for display from firebase
+    const itemsRef = ref(db, '/users/' + user.uid);
+    onValue(itemsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const itemList = Object.keys(data).map((key) => ({
+          id: key,
+          ...data[key],
+        }));
+        console.log(data);
+      }
+    });
+
 
     // profile picture
     const [image, setImage] = useState(null);
@@ -135,6 +155,13 @@ export function Account(props) {
 
     };
 
+    const handleDeleteAccount = (e) =>{
+        //deleting uder account
+        console.log("hamdling user deletion");
+        setDeleting(false);
+
+    };
+
     return (
         <div className="accountContainer">
             <SideBar/>
@@ -167,14 +194,14 @@ export function Account(props) {
                 </div>
 
                 <div className="textContainer">
-                    <div> display name here </div>
+                    <div> {displayname} </div>
                     <div className="nameInput">
                         <form onSubmit={(e)=>handleEditName(e)}>
                             <input name="text" placeholder="Enter name" onChange={(e)=>handleChangeName(e)}/>
                             <button name="editStatus" className="saveButton" type="submit"> Save </button>
                         </form>
                     </div>
-                    <div> display status here </div>
+                    <div> {displaystatus} </div>
                     <div className="statusInput">
                         <form onSubmit={(e) => handleEditStatus(e)}>
                             <select className="selectStatus" onChange={(e)=>handleChangeStatus(e)}>
@@ -192,12 +219,24 @@ export function Account(props) {
                             <button name="editStatus" className="saveButton" onClick={(e) => {handleEditEmail(e)}}>Save</button>
                         </form>
                     </div>*/}
-                    <div> Display bio here </div>
+                    <div> {displaybio} </div>
                     <div className="bioInput">
                         {/* <input name="text" placeholder="Enter bio"/> */}
                         <form onSubmit={(e) => handleEditBio(e)}>
                             <textarea placeholder="Enter bio" onChange={(e)=>handleChangeBio(e)}></textarea>
                             <button name="editStatus" className="saveButton" type="submit">Save</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <form>
+                            {!deleting && <button onClick={() => setDeleting(true)}>Delete account</button>}
+                            {deleting && 
+                            <div>
+                                Are you sure you whant to delete your account?
+                                <button onClick={(e) => handleDeleteAccount(e)}>Yes</button>
+                                <button onClick={() => setDeleting(false)}>No</button>
+                            </div>}
                         </form>
                     </div>
 
