@@ -4,7 +4,6 @@ import taskTapLogo from "../Assets/TaskTapLogoVertical.png";
 import ourMission from "../Assets/OurMission.png";
 import ourValues from "../Assets/OurValues.png";
 import contact from "../Assets/ContactUs.png";
-import team from "../Assets/team.png";
 import React, { useRef, useEffect } from 'react';
 
 export function AboutUs() {
