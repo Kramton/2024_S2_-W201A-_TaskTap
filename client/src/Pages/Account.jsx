@@ -167,18 +167,18 @@ export function Account(props) {
                 </div>
 
                 <div className="textContainer">
-                    <div> display name here </div>
+                    <div> Name: </div>
                     <div className="nameInput">
                         <form onSubmit={(e)=>handleEditName(e)}>
                             <input name="text" placeholder="Enter name" onChange={(e)=>handleChangeName(e)}/>
                             <button name="editStatus" className="saveButton" type="submit"> Save </button>
                         </form>
                     </div>
-                    <div> display status here </div>
+                    <div> Status </div>
                     <div className="statusInput">
                         <form onSubmit={(e) => handleEditStatus(e)}>
                             <select className="selectStatus" onChange={(e)=>handleChangeStatus(e)}>
-                                <option>Cleint</option>
+                                <option>Client</option>
                                 <option>Pro</option>     
                             </select>
                             <button name="editStatus" className="saveButton" type="submit">Save</button>
