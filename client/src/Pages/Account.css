@@ -215,3 +215,13 @@
   border-radius: 20px;
   padding: 20px;
 }
+
+.saveButton {
+  color: red;
+}
+
+.emailInput, .statusInput, .bioInput, .nameInput{
+  border: 2px solid red;
+  margin: 10px;
+}
+

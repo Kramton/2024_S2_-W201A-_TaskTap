@@ -28,8 +28,6 @@ export function Navbar(props) {
         });
     }
 
-
-
     return (
         <div className="navBarWrap">
             <a href="./">

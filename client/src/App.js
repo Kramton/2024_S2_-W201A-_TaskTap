@@ -15,13 +15,10 @@ import { useState } from 'react';
 
 function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(null); 
-
   return (
     <Router>
       <Routes>
-        
         <Route element= {<PageLayout userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}>
-          
           <Route path="/" element={<Home/>}/>
           <Route path="/SignInSignUp" element={<SignInSignUp userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}/>
           <Route path="/Account" element={<Account userLoggedIn={userLoggedIn}/>}/>
