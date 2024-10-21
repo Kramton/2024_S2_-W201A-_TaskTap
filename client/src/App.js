@@ -16,19 +16,20 @@ import { useState } from 'react';
 
 function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(null); 
+  
   return (
     <Router>
       <Routes>
-        <Route element= {<PageLayout userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/SignInSignUp" element={<SignInSignUp userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}/>
-          <Route path="/Account" element={<Account userLoggedIn={userLoggedIn}/>}/>
-          <Route path="/AboutUs" element={<AboutUs/>}/>
-          <Route path="/NewOrders" element={<NewOrders/>}/>
-          <Route path="/CurrentOrder" element={<CurrentOrder/>}/>
-          <Route path="/OrderHistory" element={<OrderHistory/>}/>
-          <Route path="/Professionals" element={<Professionals/>}/>
-          <Route path="/Review/:professionalId" element={<Review/>}/>
+        <Route element={<PageLayout userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}>
+          <Route path="/" element={<Home />} />
+          <Route path="/SignInSignUp" element={<SignInSignUp userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn} />} />
+          <Route path="/Account" element={<Account userLoggedIn={userLoggedIn} />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/NewOrders" element={<NewOrders />} />
+          <Route path="/CurrentOrder" element={<CurrentOrder />} />
+          <Route path="/OrderHistory" element={<OrderHistory />} />
+          <Route path="/Professionals" element={<Professionals />} />
+          <Route path="/Review/:id" element={<Review />} /> 
         </Route>
       </Routes>
     </Router>
