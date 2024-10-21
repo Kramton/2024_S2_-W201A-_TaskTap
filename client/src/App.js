@@ -5,6 +5,7 @@ import { Account } from './Pages/Account';
 import { NewOrders } from './Pages/NewOrders';
 import { CurrentOrder } from './Pages/CurrentOrder';
 import { OrderHistory } from './Pages/OrderHistory';
+import { AboutUs } from './Pages/AboutUs';
 import { Professionals } from './Pages/Professionals'; 
 import { Review } from './Pages/Review'; 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/SignInSignUp" element={<SignInSignUp userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}/>}/>
           <Route path="/Account" element={<Account userLoggedIn={userLoggedIn}/>}/>
+          <Route path="/AboutUs" element={<AboutUs/>}/>
           <Route path="/NewOrders" element={<NewOrders/>}/>
           <Route path="/CurrentOrder" element={<CurrentOrder/>}/>
           <Route path="/OrderHistory" element={<OrderHistory/>}/>
