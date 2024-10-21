@@ -39,9 +39,9 @@ h2 {
 }
 
 .professionalItem p {
-    white-space: normal; /* Allow wrapping */
-    overflow-wrap: break-word; /* Break long words to prevent overflow */
-    word-wrap: break-word; /* For older browsers */
-    word-break: break-word; /* Break words that are too long */
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    word-break: break-word; 
   }
   

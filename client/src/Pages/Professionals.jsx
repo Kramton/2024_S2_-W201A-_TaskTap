@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Professionals.css';
 import { SideBar } from "../Components/SideBar";
-import { db } from '../firebase'; // Adjust this based on your file structure
+import { db } from '../firebase'; 
 import { ref, onValue } from 'firebase/database';
 
 export function Professionals() {
@@ -10,12 +10,12 @@ export function Professionals() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    const professionalsRef = ref(db, 'users'); // Change 'users' if the node name is different
+    const professionalsRef = ref(db, 'users'); 
 
     onValue(professionalsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        // Filter for professionals
+        
         const proList = Object.keys(data)
           .map(key => ({ id: key, ...data[key] }))
           .filter(professional => professional.userStatus === 'Pro');
@@ -51,7 +51,7 @@ export function Professionals() {
               <Link to={`/Review/${professional.id}`}>
                 <h4>{professional.userName}</h4>
               </Link>
-              <p>Bio: {professional.userBio}</p> {/* Bio will now wrap if too long */}
+              <p>Bio: {professional.userBio}</p> 
             </div>
           ))}
         </div>
