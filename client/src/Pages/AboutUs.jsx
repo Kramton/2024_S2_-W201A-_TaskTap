@@ -4,6 +4,7 @@ import taskTapLogo from "../Assets/TaskTapLogoVertical.png";
 import ourMission from "../Assets/OurMission.png";
 import ourValues from "../Assets/OurValues.png";
 import contact from "../Assets/ContactUs.png";
+import team from "../Assets/team.png";
 import React, { useRef, useEffect } from 'react';
 
 export function AboutUs() {
@@ -59,6 +60,7 @@ export function AboutUs() {
             
             <h1>Meet the Team</h1>
             <div className="AboutUsTeamWrap">
+                <img className="image" src={team} alt="Our Team" />
                 <div className="AboutUsTeamParagraph">
                     <p>
                         TaskTap is built by a passionate group of developers, designers, and productivity enthusiasts
