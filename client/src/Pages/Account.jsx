@@ -246,7 +246,7 @@ export function Account(props) {
 
                     <div>
                         <form>
-                            {!deleting && <button onClick={() => setDeleting(true)}>Delete account</button>}
+                            {!deleting && <button onClick={() => setDeleting(true)}></button>}
                             {deleting && 
                             <div>
                                 Are you sure you whant to delete your account?
