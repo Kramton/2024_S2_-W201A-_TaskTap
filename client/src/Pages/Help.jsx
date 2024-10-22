@@ -9,7 +9,24 @@ export function Help() {
         <div className="helpContainer">
             <SideBar />
             <Background />
-            <h1>Help</h1>
+            <br />
+
+            <div className="helpWrap">
+                <h1>Help</h1>
+            </div>
+
+            <br />
+
+            <div className="howTo">
+                <h2>How To Create An Order</h2>
+                <p>Follow these 5 easy steps to create your first order!</p>
+                <p><strong>Step 1:</strong> Click Account button</p>
+                <p><strong>Step 2:</strong> Click New Orders button</p>
+                <p><strong>Step 3:</strong> Fill in the details of your order!</p>
+                <p><strong>Step 4:</strong> Click Save button</p>
+                <p><strong>Step 5:</strong> Click Current Orders button</p>
+            </div>
+            
         </div>
     )
 }
