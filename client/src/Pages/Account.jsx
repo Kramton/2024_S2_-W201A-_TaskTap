@@ -1,7 +1,7 @@
 // import { Link } from "react-router-dom"
 import "./Account.css";
 import { SideBar } from "../Components/SideBar";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import defaultProfile from "../Assets/defaultProfile.png";
 import defaultbg from "../Assets/square.png";
 //import { getAuth } from "firebase/auth";
@@ -30,18 +30,34 @@ export function Account(props) {
     const [displaystatus, setDisplaystatus] = useState(null);
     const [displaybio, setDisplaybio] = useState(null);
 
+    const [userdata, setUserdata] = useState(null);
+
+    useEffect(() => {
+        const userRef = ref(db, 'users/' + user.uid);
+        onValue(userRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const itemList = Object.keys(data).map((key) => ({
+                    id: key,
+                    ...data[key],
+                }));
+                setUserdata(data);
+                console.log(data);
+               // console.log(userdata.userBio);
+               // const c1 = userdata.userBio;
+               // const c2 = userdata.userName;
+               // const c3 = userdata.userStatus;
+                setDisplaybio(data["userBio"]);
+                setDisplayname(data["userName"]);
+                setDisplaystatus(data["userStatus"]);
+            }
+
+        });
+    }, []);
+      
+
     //fetching profile details for display from firebase
-    const itemsRef = ref(db, '/users/' + user.uid);
-    onValue(itemsRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const itemList = Object.keys(data).map((key) => ({
-          id: key,
-          ...data[key],
-        }));
-        console.log(data);
-      }
-    });
+    
 
 
     // profile picture

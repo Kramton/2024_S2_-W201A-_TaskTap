@@ -22,15 +22,16 @@ function ItemList() {
     });
   }, []);
 
-  // Function to handle delete
+  
   const handleDelete = async (id) => {
     try {
-      await remove(ref(db, `jobs/${id}`));
-      console.log(`Deleted item with id: ${id}`);
+      await update(ref(db, `jobs/${id}`), { status: "completed" }); 
+      console.log(`Moved item with id: ${id} to order history`);
     } catch (error) {
-      console.error('Error deleting item: ', error);
+      console.error('Error moving item to order history: ', error);
     }
   };
+  
 
 
   const handleEdit = (id) => {
