@@ -8,13 +8,14 @@ import {signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import bg from "../Assets/bg.mp4";
 import {db} from "../firebase"
-import { getDatabase, ref, set} from "firebase/database";
+import { ref, set } from "firebase/database";
 
 
 const SignInSignUp = (props) => {
     const [hovered, setHovered] = useState('');
     const [userCredentials, setUserCredentials] = useState({});
     const [error, setError] = useState(null);
+    const [isServiceProvider, setIsServiceProvider] = useState(false);
     const navigate = useNavigate();
 
     function handleCredentials(e){
@@ -26,20 +27,12 @@ const SignInSignUp = (props) => {
       setError(null);
       signInWithEmailAndPassword(auth, userCredentials.email[0], userCredentials.password[0])
       .then((userCredential) => {
-        // Signed in 
         props.setUserLoggedIn(userCredential.user);
-        console.log(props.userLoggedIn);
         navigate('/Account');
-        // ...
       })
       .catch((error) => {
-      
         setError(error.message)
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-
+        console.log(error.code, error.message);
       });
     }
 
@@ -47,41 +40,27 @@ const SignInSignUp = (props) => {
       e.preventDefault();
       setError(null)
       createUserWithEmailAndPassword(auth, userCredentials.email[0], userCredentials.password[0])
-        //Important: userCredentials.email is an array
-        //with a single element. need to send the content of the element - a string
-        //hence userCredentials.email[0]
         .then((userCredential) => {                                                              
-          // Signed up 
           props.setUserLoggedIn(userCredential.user);
-          console.log(userCredential.user.uid);
-          //console.log(props.userLoggedIn);
           navigate('/Account');
           set(ref(db, 'users/' + userCredential.user.uid), {
             userName: userCredential.user.uid,
-            userStatus: "Client",
+            userStatus: isServiceProvider ? "Service Provider" : "Client",
             userBio: "Empty"
           });
-          // ...
         })
         .catch((error) => {
           setError(error.message)
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode);
-          console.log(errorMessage);
-          // ..
+          console.log(error.code, error.message);
         });
     }
-
-    //<input onChange={(e)=>handleCredentials(e)} type="email" name="emailconfirmation"placeholder="Confirm Email" />
 
     return (
       <div className="signPage">
         <div className="background">
-                <video src={ bg } autoPlay loop muted></video>
-            </div>
+          <video src={ bg } autoPlay loop muted></video>
+        </div>
 
-        {/* Set hovered state when mouse cursor is in sign in */}
         <div
           className={`hoverState ${hovered === 'signIn' ? 'hover' : ''}`}
           onMouseEnter={() => setHovered('signIn')}
@@ -89,14 +68,13 @@ const SignInSignUp = (props) => {
         >
           <h2>Sign In</h2>
           <form className="formCreate">
-            <input onChange={(e)=>{handleCredentials(e)}} type="email" name="email" placeholder="Enter your email" />
-            <input onChange={(e)=>{handleCredentials(e)}} type="password" name="password" placeholder="Enter your password" />
+            <input onChange={handleCredentials} type="email" name="email" placeholder="Enter your email" />
+            <input onChange={handleCredentials} type="password" name="password" placeholder="Enter your password" />
             {error && <ErrorMessage text={error}/>}
-            <button type="submit" onClick={(e)=>handleSignin(e)}>Sign In</button>
+            <button type="submit" onClick={handleSignin}>Sign In</button>
           </form>
         </div>
         
-        {/* Set hovered state when mouse cursor is in sign in */}
         <div
           className={`hoverState ${hovered === 'signUp' ? 'hover' : ''}`}
           onMouseEnter={() => setHovered('signUp')}
@@ -104,14 +82,21 @@ const SignInSignUp = (props) => {
         >
           <h2>Sign Up</h2>
           <form className="formCreate">
-            <input onChange={(e)=>{handleCredentials(e)}} type="email" name="email" placeholder="Enter your email" />
-            <input onChange={(e)=>{handleCredentials(e)}} type="password" name="password" placeholder="Enter a password" />
+            <input onChange={handleCredentials} type="email" name="email" placeholder="Enter your email" />
+            <input onChange={handleCredentials} type="password" name="password" placeholder="Enter a password" />
+            <label className="checkboxLabel">
+              <input 
+                type="checkbox" 
+                onChange={(e) => setIsServiceProvider(e.target.checked)} 
+              />
+              Would you like to provide a service?
+            </label>
             {error && <ErrorMessage text={error}/>}
-            <button type="submit" onClick={(e) => {handleSignup(e)}}>Create Account</button>
+            <button type="submit" onClick={handleSignup}>Create Account</button>
           </form>
         </div>
       </div>
     );
-  };
+};
 
-export default SignInSignUp
+export default SignInSignUp;
