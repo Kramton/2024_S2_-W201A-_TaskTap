@@ -1,109 +1,107 @@
+.formContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 90%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000; 
+}
+
+.formOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
+}
+
+.formContainer input,
+.formContainer textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.formContainer input:focus,
+.formContainer textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.formActions button {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.saveButton {
+  background-color: #2855a7;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+}
+
+.saveButton:hover {
+  background-color: #213c88;
+}
+
+.cancelButton:hover {
+  background-color: #5a6268;
+}
+
 .currentOrderContainer {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-  }
-  
-  .currentOrderContent {
-    flex-grow: 1;
-    padding: 20px 40px 20px 60px;
-    overflow: auto;
-    margin-left: 180px;
-  }
-  
-  .currentOrderList {
-    margin-top: 20px;
-  }
-  
-  .currentOrder h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
+  display: flex;
+  height: 100vh;
+  background-color: #f0f2f5; 
+}
 
-  .formContainer {
-    max-width: 600px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .formContainer form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .formContainer h3 {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .formContainer input,
-  .formContainer textarea {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .formActions {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-  }
-  
-  .formActions button {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #fff;
-  }
-  
-  .saveButton {
-    background-color: #007bff;
-  }
-  
-  .cancelButton {
-    background-color: #6c757d;
-  }
-  
-  .saveButton:hover,
-  .cancelButton:hover {
-    opacity: 0.9;
-  }
+.SideBar {
+  width: 200px;
+}
 
-  .currentOrderContainer {
-    display: flex; 
-    height: 100vh; 
-  }
-  
-  .currentOrderList {
-    margin-left: 250px; 
-    padding: 20px; 
-    flex: 1; 
-    overflow-y: auto; 
-  }
-  
-  
-  h1 {
-    margin-top: 0; 
-  }
+.currentOrderList {
+  margin-left: 6px; 
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
 
-  .noOrdersMessage {
-    font-size: 24px; 
-    font-weight: bold; 
-    color: #ff0000; 
-    text-align: center; 
-    margin-top: 20px; 
-  }
-  
-  
-  
-  
-  
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; 
+}
+
+.noOrdersMessage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d9534f; 
+  text-align: center;
+  margin-top: 20px;
+}
+
