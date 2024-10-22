@@ -66,7 +66,7 @@
 
 .checkboxLabel input {
   margin-right: -200px;
-  transform: scale(1.3); /* Optional: to make the checkbox slightly larger */
+  transform: scale(1.3); 
 }
 
 
