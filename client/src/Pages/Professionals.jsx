@@ -42,14 +42,14 @@ export function Professionals() {
 
   const handleJobSubmit = async () => {
     if (selectedPro && jobDescription) {
-      // Push the new job proposal to the 'jobs' node in the database
+      
       await push(ref(db, 'jobs'), {
         proId: selectedPro.id,
-        clientId: auth.currentUser?.uid, // Assuming the logged-in user is the client
-        jobType: 'Custom Job', // You can add more fields like job type if needed
+        clientId: auth.currentUser?.uid, 
+        jobType: 'Custom Job', 
         description: jobDescription,
-        status: 'current', // Set the status to 'current' initially
-        startDate: new Date().toISOString(), // Add current date as start date
+        status: 'current', 
+        startDate: new Date().toISOString(), 
       });
 
       // Clear the modal

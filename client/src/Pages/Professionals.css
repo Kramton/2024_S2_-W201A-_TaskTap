@@ -38,7 +38,7 @@ h2 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start; 
 }
 
 .professionalItem p {
@@ -56,7 +56,7 @@ h2 {
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
-    align-self: flex-end; /* Align button to the right */
+    align-self: flex-end; 
 }
 
 .proposeJobButton:hover {
