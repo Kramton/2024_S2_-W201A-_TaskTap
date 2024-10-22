@@ -77,5 +77,33 @@
   .cancelButton:hover {
     opacity: 0.9;
   }
+
+  .currentOrderContainer {
+    display: flex; 
+    height: 100vh; 
+  }
+  
+  .currentOrderList {
+    margin-left: 250px; 
+    padding: 20px; 
+    flex: 1; 
+    overflow-y: auto; 
+  }
+  
+  
+  h1 {
+    margin-top: 0; 
+  }
+
+  .noOrdersMessage {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #ff0000; 
+    text-align: center; 
+    margin-top: 20px; 
+  }
+  
+  
+  
   
   

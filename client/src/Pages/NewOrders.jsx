@@ -2,8 +2,8 @@ import { SideBar } from "../Components/SideBar";
 import "./NewOrders.css"
 import React, { useState, useRef } from "react";
 import "./NewOrders.css";
-import { getDatabase, ref, set } from "firebase/database"; // Realtime Database
-import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage"; // Firebase Storage
+import { getDatabase, ref, set } from "firebase/database"; 
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage"; 
 import { v4 as uuidv4 } from "uuid";
 import ItemList from "../Components/ItemList";
 
@@ -55,7 +55,9 @@ export function NewOrders() {
         description,
         photoURL,
         timestamp: new Date().toISOString(),
+        status: "current", 
       });
+      
 
       console.log("Job saved!");
 
