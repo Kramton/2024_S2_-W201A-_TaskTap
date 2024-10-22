@@ -22,7 +22,10 @@ export function SideBar() {
                         <button>Professionals</button>
                     </Link> 
                     <button>Chat</button>
-                    <button>Help</button>
+                    <Link to="/Help">
+                        <button>Help</button>
+                    </Link>
+                    
                 </div>
             </div>
         </div>
