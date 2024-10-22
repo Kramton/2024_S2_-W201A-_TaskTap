@@ -15,6 +15,8 @@ export function Account(props) {
     
     //const auth = getAuth();
     const user = auth.currentUser;
+    //const user = auth.userLoggedIn;
+    //console.log(user["uid"]);
 
     const [name, setName] = useState(null);
 
@@ -24,7 +26,8 @@ export function Account(props) {
 
     const [bio, setBio] = useState(null);
 
-    const [deleting, setDeleting] = useState(null);
+    const [deleting, setDeleting] = useState(false);
+    console.log(deleting);
 
     const [displayname, setDisplayname] = useState(null);
     const [displaystatus, setDisplaystatus] = useState(null);
@@ -173,9 +176,16 @@ export function Account(props) {
 
     const handleDeleteAccount = (e) =>{
         //deleting uder account
-        console.log("hamdling user deletion");
+        console.log("handling user deletion");
         setDeleting(false);
-
+        const dbRef = ref(db, 'user/' + user.uid);
+       /* remove(dbRef)
+        .then(() => {
+            console.log("User deleted");
+        })
+        .catch((error) => {
+            console.error("Error deleting user", error);
+        });*/
     };
 
     return (
@@ -244,16 +254,18 @@ export function Account(props) {
                         </form>
                     </div>
 
-                    <div>
-                        <form>
-                            {!deleting && <button onClick={() => setDeleting(true)}>Delete account</button>}
+                    <div className="bioInput">
+                        text
+                        
+                        
+                            {!deleting && <button className="saveButton" type="button" onClick={() => setDeleting(true)}>Delete account</button>}
                             {deleting && 
                             <div>
                                 Are you sure you whant to delete your account?
-                                <button onClick={(e) => handleDeleteAccount(e)}>Yes</button>
-                                <button onClick={() => setDeleting(false)}>No</button>
+                                <button className="saveButton" type="button" onClick={(e) => handleDeleteAccount(e)}>Yes</button>
+                                <button className="saveButton" type="button" onClick={() => setDeleting(false)}>No</button>
                             </div>}
-                        </form>
+                    
                     </div>
 
                     <div className="userReviews">

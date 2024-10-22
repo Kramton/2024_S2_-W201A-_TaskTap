@@ -1,55 +1,48 @@
-/* 
 .accountContainer {
   align-items: center;
-} */
+}
 
 .accountContainer .content {
-  /* background-color: rgba(0, 0, 0, 0.11); */
-  /* display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center; */
   top: 0;
   left: 0;
   margin-left: 230px;
   height: 100vh;
-  /* border-bottom: black; */
 }
 
 .content h1 {
-  /* padding-left: 50%; */
-  /* text-align: center; */
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
 }
 
 .content p {
-  /* text-align: center; */
-  /* padding-left: 30%; */
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
 }
 
 .content .profile-picture-section {
-  /* background-color: rgba(0, 0, 0, 0.5); */
   top: 30%;
-  /* left: 20%; */
-  /* top: 260px; */
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 5px solid rgba(0, 0, 0, 0.5);
+  border: 5px solid rgba(0, 0, 0, 0.2);
   position: absolute;
   background-color: white;
   text-align: center;
   margin-left: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content .profile-bg-section {
-  width: 100wh;
+  width: 100vw;
   height: 30%;
 }
 
 .content .background-image {
   width: 100%;
   height: 100%;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
   object-fit: cover;
 }
 
@@ -61,7 +54,7 @@
 }
 
 .content input[type="file"] {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .content .saveButton {
@@ -71,6 +64,8 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .content .saveButton:hover {
@@ -83,21 +78,20 @@
 }
 
 .content .changeProfileButton label {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   cursor: pointer;
   padding: 90px;
   border-radius: 50%;
-  color: rgba(255, 255, 255, 0.0);
+  color: transparent;
 }
 
 .content .changeProfileButton label:hover {
   background-color: rgba(0, 0, 0, 0.2);
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .content .changebgButton {
   top: 32%;
-  /* bottom: 68%; */
   right: 1%;
   position: absolute;
 }
@@ -107,12 +101,13 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease;
 }
 
 .content .changebgButton label:hover {
   background-color: rgba(0, 0, 0, 0.5);
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .content .changebgButton input {
@@ -121,49 +116,31 @@
 
 .content .textContainer {
   position: absolute;
-  /* top: 50%; */
-  /* background-color: gray; */
-  /* width: 100vw; */
   margin-left: 400px;
   margin-top: 20px;
 }
 
-.content .textContainer .nameInput input {
-  color: black;
-  font-size: 32px;
-  font-weight: bold;
-  border-style: none;
-  outline: none;
-}
-
+.content .textContainer .nameInput input,
 .content .textContainer .statusInput input {
   color: black;
-  font-size: 18px;
+  font-size: 1.5em;
   font-weight: bold;
-  border-style: none;
+  border: none;
   outline: none;
+  border-bottom: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.content .textContainer .nameInput input:focus,
+.content .textContainer .statusInput input:focus {
+  border-bottom: 2px solid #007bff;
 }
 
 .content .textContainer .bioInput {
-  /* color: black; */
-  /* font-size: 18px; */
-  /* background-color: gray; */
-  margin-top: 50px;
   height: 100px;
-  width: auto;
-  border-radius: 20px;
-}
-
-/* .content .textContainer .bioInput input {
-  text-align: left;
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  border: 0;
-  outline: 0;
-  height: 100%;
   width: 100%;
-} */
+  border-radius: 10px;
+}
 
 .bioInput textarea {
   width: 100%;
@@ -171,14 +148,16 @@
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  border-radius: 20px;
-  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-radius: 10px;
   font-size: 16px;
   resize: none;
-  /* display: none; */
-  border-style: none;
   outline: none;
   background-color: whitesmoke;
+  transition: border-color 0.3s ease;
+}
+
+.bioInput textarea:focus {
+  border-color: #007bff;
 }
 
 .userReviews {
@@ -189,7 +168,7 @@
   margin-left: 5px;
   border-radius: 20px;
   padding: 20px;
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contactInfo {
@@ -201,6 +180,7 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .accountContainer .userMedia {
@@ -214,14 +194,5 @@
   margin-left: 950px;
   border-radius: 20px;
   padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.saveButton {
-  color: red;
-}
-
-.emailInput, .statusInput, .bioInput, .nameInput{
-  border: 2px solid red;
-  margin: 10px;
-}
-
