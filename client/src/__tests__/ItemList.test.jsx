@@ -31,28 +31,31 @@ jest.mock('firebase/database', () => ({
 
 
 describe('ItemList component', () => {
-  test('handleEdit sets the correct item in edit mode', () => {
-    // Mocking the items and editItem state
-    const items = [
-      { id: '1', jobType: 'Full Time', startDate: '2023-10-01', description: 'Job 1' },
-      { id: '2', jobType: 'Part Time', startDate: '2023-11-01', description: 'Job 2' }
-    ];
 
-    // Mocking the state using React's useState to simulate the component's behavior
-    jest.spyOn(React, 'useState')
-      .mockImplementationOnce(() => [items, jest.fn()])   // First call to useState: items list
-      .mockImplementationOnce(() => [null, jest.fn()]);  // Second call to useState: editItem state
+  const mockItems = [
+    { id: '1', name: 'Order 1', description: 'Description 1' },
+    { id: '2', name: 'Order 2', description: 'Description 2' },
+  ];
 
-    const { getByText } = render(<ItemList />);
+  test('should display a list of orders', () => {
+    render(<ItemList />);
 
-    // Simulate clicking the Edit button for the first item
-    const editButton = getByText(/Edit/i); // Assuming button has 'Edit' text
-    userEvent.click(editButton);
+    // Check if the orders are displayed
+    expect(screen.getByText('Order 1')).toBeInTheDocument();
+    expect(screen.getByText('Order 2')).toBeInTheDocument();
+  });
 
-    // Check that the editItem state is set by verifying if the edit form appears with correct values
-    expect(screen.getByDisplayValue('Full Time')).toBeInTheDocument();
-    expect(screen.getByDisplayValue('2023-10-01')).toBeInTheDocument();
-    expect(screen.getByDisplayValue('Job 1')).toBeInTheDocument();
+  test('should not display any orders if none are present', () => {
+    // Simulating no items in the database
+    jest.mocked(onValue).mockImplementationOnce((ref, callback) => {
+      callback({ val: () => null });
+    });
+
+    render(<ItemList />);
+
+    // Check if a message or empty state is displayed when there are no orders
+    expect(screen.queryByText('Order 1')).not.toBeInTheDocument();
+    expect(screen.queryByText('Order 2')).not.toBeInTheDocument();
   });
 
   test('render ItemList', () => {
@@ -60,4 +63,7 @@ describe('ItemList component', () => {
     const list = screen.getByText(/Items List/i);
     expect(list).toBeInTheDocument();
   });
+
 });
+
+// to test for specific component do: npm test -- src/__tests__/ItemList.test.jsx
