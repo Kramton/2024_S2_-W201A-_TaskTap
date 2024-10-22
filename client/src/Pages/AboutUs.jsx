@@ -1,5 +1,5 @@
 import "./AboutUs.css";
-import bg from "../Assets/bg.mp4";
+import { Background } from "../Components/Background";
 import taskTapLogo from "../Assets/TaskTapLogoVertical.png";
 import ourMission from "../Assets/OurMission.png";
 import ourValues from "../Assets/OurValues.png";
@@ -12,9 +12,7 @@ export function AboutUs() {
     return (
         <div className="AboutUsContainer">
 
-            <div className="background">
-                <video src={bg} autoPlay loop muted></video>
-            </div>
+            <Background />
 
             <h1>About Us</h1>
             <div className="AboutUsWrap">
