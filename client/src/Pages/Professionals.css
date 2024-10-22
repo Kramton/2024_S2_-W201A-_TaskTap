@@ -36,6 +36,9 @@ h2 {
     margin: 10px 0; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
 }
 
 .professionalItem p {
@@ -43,5 +46,72 @@ h2 {
     overflow-wrap: break-word; 
     word-wrap: break-word; 
     word-break: break-word; 
-  }
-  
+}
+
+.proposeJobButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end; /* Align button to the right */
+}
+
+.proposeJobButton:hover {
+    background-color: #45a049;
+}
+
+/* Modal styling */
+.jobProposalModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.jobDescriptionInput {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modalContent button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modalContent button:hover {
+    background-color: #45a049;
+}
+
+.modalContent .cancelButton {
+    background-color: #f44336;
+}
+
+.modalContent .cancelButton:hover {
+    background-color: #e53935;
+}
